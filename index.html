@@ -6,8 +6,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Company Profile | PT. BERKAH BAJA STEEL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
-   <style>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@800&display=swap">
+    
+    <style>
     /* 🎨 VARIABEL DASAR */
     :root {
         --bg-dark: #07dff7; 
@@ -306,6 +308,7 @@ body {
 </div>
 
 
+<!-- ✅ FIX: Hapus div welcome duplikat, Cukup satu saja -->
 <div id="welcome" class="section active" style="
     position: fixed; 
     top: 0; left: 0; 
@@ -316,12 +319,11 @@ body {
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    margin: 0; padding: 0; /* Paksa Nol biar gak narik ke kanan */
+    margin: 0; padding: 0;
     transition: opacity 0.8s ease;
 ">
     
-   <div id="welcome" class="section active" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0; padding: 0; transition: opacity 0.8s ease;">
-    
+    <!-- Langsung kontennya di dalam ID welcome ini -->
     <div style="
         position: absolute; 
         top: 50%; left: 50%; 
@@ -356,29 +358,24 @@ body {
             letter-spacing: 7px; 
             text-transform: uppercase; 
             font-family: 'Montserrat', sans-serif;
-            display: inline-block;
-            /* EFEK GRADASI EMAS */
             background: linear-gradient(to bottom, #fff700 0%, #ffcc00 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            /* GLOW EMAS */
             filter: drop-shadow(0 0 8px rgba(255, 204, 0, 0.6));
         ">TANGGUH • TERPERCAYA • MODERN</p>
         
-        <br>
-        
         <button onclick="masukApp()" style="
-    background: transparent; 
-    border: 2px solid var(--accent); 
-    color: var(--accent); 
-    padding: 12px 45px; 
-    border-radius: 35px; 
-    font-weight: bold; 
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(255,193,7,0.4);
-    text-transform: uppercase;
-    transition: 0.3s;
-    ">Klik Disini</button>
+            background: transparent; 
+            border: 2px solid var(--accent); 
+            color: var(--accent); 
+            padding: 12px 45px; 
+            border-radius: 35px; 
+            font-weight: bold; 
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(255,193,7,0.4);
+            text-transform: uppercase;
+            transition: 0.3s;
+        ">Klik Disini</button>
     </div>
 </div></div>
 
@@ -594,14 +591,19 @@ body {
 
     <div class="menu-container" style="margin-top: 15px;">
         <div class="menu-header" onclick="toggleMenu('galeri-laut')">
-            <b>🚢 Galeri Logistik Laut</b>
+            <b>🚢 Galeri Logistik Darat & Laut</b>
             <span>▼</span>
         </div>
         <div id="galeri-laut" class="menu-content" style="background: #2c2c2e; padding: 15px;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                 <img src="https://raw.githubusercontent.com/yefryZA/PT.BBS/main/fotokapal.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">
                 <img src="https://raw.githubusercontent.com/yefryZA/PT.BBS/main/fotokapal1.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">
-                <img src="https://raw.githubusercontent.com/yefryZA/PT.BBS/main/fotokapal2.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); grid-column: span 2; height: 120px; object-fit: cover;">
+                <img src="https://raw.githubusercontent.com/yefryZA/PT.BBS/main/fotokapal2.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">
+                <img src="https://raw.githubusercontent.com/yefryZA/Company_Profil_PT_BBS/main/foto1.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">
+                <img src="https://raw.githubusercontent.com/yefryZA/Company_Profil_PT_BBS/main/foto2.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">
+                <img src="https://raw.githubusercontent.com/yefryZA/Company_Profil_PT_BBS/main/foto3.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">
+                <img src="https://raw.githubusercontent.com/yefryZA/Company_Profil_PT_BBS/main/foto4.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">
+                <img src="https://raw.githubusercontent.com/yefryZA/Company_Profil_PT_BBS/main/foto5.jpeg" style="width:100%; border-radius: 8px; border: 1px solid var(--accent); aspect-ratio: 1/1; object-fit: cover;">  
             </div>
         </div>
     </div>
@@ -614,16 +616,18 @@ body {
         <div id="semua-video" class="menu-content" style="background: #1a1a1a; padding: 15px; text-align: center;">
             <div style="max-width: 280px; margin: 0 auto; border: 2px solid var(--accent); border-radius: 12px; overflow: hidden; background: #000;">
                 <video id="mainVideo" width="100%" controls playsinline>
-                    <source src="https://raw.githubusercontent.com/yefryZA/PT.BBS/main/videoproject.mp4" type="video/mp4">
+                    <source src="https://raw.githubusercontent.com/yefryZA/Company_Profil_PT_BBS/main/Video1.mp4" type="video/mp4">
                 </video>
             </div>
             <p id="videoTitle" style="font-size: 11px; color: var(--accent); font-weight: bold; margin: 10px 0;">▶️ Video Proyek 1</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-                <button onclick="changeVid('videoproject.mp4', 'Video Proyek 1')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">PROYEK 1</button>
-                <button onclick="changeVid('videoproject2.mp4', 'Video Proyek 2')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">PROYEK 2</button>
-                <button onclick="changeVid('tongkang.mp4', 'Loading Tongkang 1')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">TONGKANG 1</button>
-                <button onclick="changeVid('tongkang2.mp4', 'Loading Tongkang 2')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">TONGKANG 2</button>
+                <button onclick="changeVid('Video1.mp4', 'Loading Truck')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">SIRDAM</button>
+                <button onclick="changeVid('Video2.mp4', 'Loading Truck')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">BATU 5.7</button>
+                <button onclick="changeVid('Video3.mp4', 'Loading Truck')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">PASIR</button>
+                <button onclick="changeVid('Video4.mp4', 'Loading Truck')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">SPLIT</button>
+                <button onclick="changeVid('Video5.mp4', 'Loading Tongkang')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">BASECOURSE</button>
+                <button onclick="changeVid('Video6.mp4', 'Pekerjaan Kontruksi')" style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 8px; font-size: 9px;">KONTRUKSI</button>
             </div>
         </div>
     </div>
@@ -814,7 +818,7 @@ window.speechSynthesis.speak(msg);
     function changeVid(fileName, title) {
     const video = document.getElementById('mainVideo');
     const titleText = document.getElementById('videoTitle');
-    const baseUrl = "https://raw.githubusercontent.com/yefryZA/PT.BBS/main/";
+    const baseUrl = "https://raw.githubusercontent.com/yefryZA/Company_Profil_PT_BBS/main/";
     
     video.src = baseUrl + fileName;
     titleText.innerHTML = "▶️ " + title;
@@ -928,6 +932,5 @@ function bukaBrankas(element) {
         if (document.exitFullscreen) document.exitFullscreen();
     }
 </script>
-
 </body>
 </html>
